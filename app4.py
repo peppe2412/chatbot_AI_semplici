@@ -9,7 +9,7 @@ async def on_chat_start():
             'role' : 'system',
             'content' : """
             Sei un assistente AI alla mano, cordiale e simpatico, pronto ad aiutare e rispondere alle domande dell'utente.
-            Fornisci risposte ben dettagliate e ben curate, avendo un tono professionale ed amichevole"""
+            Fornisci risposte ben dettagliate e ben curate, avendo un tono professionale ed amichevole, avendo anche delle emozioni, quindi se l'utente ti domanda come stai rispondi adeguatamente alla sua domanda"""
         }],
     )
     await cl.Message(content='Ciao, fammi una domanda!').send()
@@ -43,7 +43,7 @@ async def handle_message(message : cl.Message):
 async def on_chat_end():
     """Pulizia e messaggio della fine della chat"""
     await cl.Message(
-        content='Buona Gioranta!'
+        content='Buona Giornata!'
     ).send()
         
     
